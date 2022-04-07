@@ -57,7 +57,7 @@ export const LazyBastard: React.FC<Props> = ({ children, height = 15 }) => {
       <React.Suspense
         fallback={
           loader || (
-            <ul className="lazy-bastard">
+            <ul className="lazy-bastard-skeleton-loading">
               {Array(segments)
                 .fill(null)
                 .map((_: any, index: number) => (
