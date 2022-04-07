@@ -1,0 +1,30 @@
+{
+  "name": "@react-goodies/lazy-bastard",
+  "version": "1.0.0",
+  "main": "dist/dist.min.js",
+  "repository": "git@github.com:marborkowski/react-lazy-component.git",
+  "author": "Marcin Borkowski <marborkowski@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha",
+    "build": "rollup --config rollup.config.ts"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@types/react": "^17.0.43",
+    "mocha": "^9.2.2",
+    "node-sass": "^7.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.70.1",
+    "rollup-plugin-scss": "3",
+    "rollup-plugin-uglify": "^6.0.4",
+    "saas": "^1.0.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
