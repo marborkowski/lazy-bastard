@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ThemeContext } from "./Provider";
-import "./styles.scss";
+import "./styles.css";
 
 interface Props {
   children: JSX.Element;
