@@ -1,6 +1,6 @@
 {
   "name": "@react-goodies/lazy-bastard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/dist.min.js",
   "repository": "git@github.com:marborkowski/react-lazy-component.git",
   "author": "Marcin Borkowski <marborkowski@gmail.com>",
