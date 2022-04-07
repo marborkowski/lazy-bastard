@@ -5,6 +5,6 @@ declare const _default: {
         format: string;
         name: string;
     };
-    plugins: any[];
+    plugins: import("rollup").Plugin[];
 };
 export default _default;
