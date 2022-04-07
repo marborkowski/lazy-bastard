@@ -3,7 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import { terser } from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "@rollup/plugin-typescript";
-import embedCSS from "rollup-plugin-embed-css";
+import styles from "rollup-plugin-styles";
 
 const packageJson = require("./package.json");
 
@@ -15,11 +15,13 @@ export default {
       format: "cjs",
       sourcemap: false,
       name: "react-lib",
+      assetFileNames: "[name]-[hash][extname]",
     },
     {
       file: packageJson.module,
       format: "esm",
       sourcemap: false,
+      assetFileNames: "[name]-[hash][extname]",
     },
   ],
   plugins: [
@@ -28,6 +30,6 @@ export default {
     commonjs(),
     typescript({ tsconfig: "./tsconfig.json" }),
     terser(),
-    embedCSS({}),
+    styles(),
   ],
 };
