@@ -1,7 +1,6 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import { terser } from "rollup-plugin-terser";
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import typescript from "@rollup/plugin-typescript";
 import styles from "rollup-plugin-styles";
 
@@ -25,11 +24,15 @@ export default {
     },
   ],
   plugins: [
-    peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({ tsconfig: "./tsconfig.json" }),
+    typescript({
+      tsconfig: "./tsconfig.json",
+      declaration: true,
+      declarationDir: "types",
+    }),
     terser(),
     styles(),
   ],
+  external: ["react", "react-dom"],
 };
