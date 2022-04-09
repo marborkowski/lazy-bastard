@@ -1,5 +1,5 @@
 {
-  "exclude": ["dist"],
+  "exclude": ["dist", "src/stories"],
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",

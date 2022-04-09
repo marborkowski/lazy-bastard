@@ -1,11 +1,12 @@
 import * as React from "react";
-interface ContextProps {
+export interface ContextProps {
     loader?: JSX.Element | null | string;
     rootMargin?: string;
     threshold?: number;
+    root?: HTMLElement;
 }
-export declare const ThemeContext: React.Context<ContextProps>;
-interface Props {
+export declare const LazyContext: React.Context<ContextProps>;
+interface Props extends ContextProps {
     children: JSX.Element | JSX.Element[];
     loader?: JSX.Element;
 }

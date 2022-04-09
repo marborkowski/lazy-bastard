@@ -1,15 +1,17 @@
 import * as React from "react";
-import { ThemeContext } from "./Provider";
+import { LazyContext, ContextProps } from "./Provider";
 import "./styles.css";
 
 interface Props {
   children: JSX.Element;
   height?: number;
+  onLoad?: () => void;
 }
 
 export const LazyBastard: React.FC<Props> = ({ children, height = 15 }) => {
   const [isVisible, setIsVisible] = React.useState<boolean>(false);
-  const { loader, rootMargin, threshold } = React.useContext(ThemeContext);
+  const { loader, root, rootMargin, threshold } =
+    React.useContext<ContextProps>(LazyContext);
   const componentRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
@@ -32,6 +34,7 @@ export const LazyBastard: React.FC<Props> = ({ children, height = 15 }) => {
           unobserve();
         },
         {
+          root,
           rootMargin,
           threshold,
         }
@@ -48,7 +51,7 @@ export const LazyBastard: React.FC<Props> = ({ children, height = 15 }) => {
   const segments: number = Math.floor(height / 26) || 1;
 
   if (!isVisible) {
-    return <div ref={componentRef} style={{ height }} />;
+    return <div ref={componentRef} />;
   }
 
   return (
