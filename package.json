@@ -1,6 +1,6 @@
 {
   "name": "@react-goodies/lazy-bastard",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "repository": "git@github.com:marborkowski/react-lazy-component.git",
