@@ -1,4 +1,4 @@
-# react-lazy-component
+# @react-goodies/lazy-bastard
 
 ## Browsers support
 
