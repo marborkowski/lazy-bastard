@@ -38,15 +38,27 @@ const Template: ComponentStory<typeof LazyBastardProvider> = (args) => (
                 <li>rootMargin</li>
                 <li>threshold</li>
             </ul>
+            <p style={{ marginBottom: "50px" }}>
+                For more information on how to use rootMargin and threshold,
+                <br />
+                see{" "}
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
+                    target="_blank"
+                >
+                    https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+                </a>
+                .
+            </p>
             <ScrollDown />
             <Lipsum />
-            <header className="long-block">
+            <div className="long-block">
                 <div>
                     <LazyBastard height={100}>
                         <TestComponent name="Eva" />
                     </LazyBastard>
                 </div>
-            </header>
+            </div>
             <Lipsum />
         </LazyBastardProvider>
     </>
@@ -54,7 +66,7 @@ const Template: ComponentStory<typeof LazyBastardProvider> = (args) => (
 
 export const Basic = Template.bind({});
 Basic.args = {
-    loader: <div>loading....</div>,
+    loader: <div>Loading....</div>,
     rootMargin: "0px",
     threshold: 1.0,
 };

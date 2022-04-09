@@ -29,13 +29,13 @@ const Template: ComponentStory<typeof LazyBastard> = (args) => (
     <>
         <ScrollDown />
         <Lipsum />
-        <header className="long-block">
+        <div className="long-block">
             <div>
                 <LazyBastard {...args}>
                     <TestComponent name="Eva" />
                 </LazyBastard>
             </div>
-        </header>
+        </div>
         <Lipsum />
     </>
 );
