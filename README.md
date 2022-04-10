@@ -1,5 +1,7 @@
 # Welcome to LazyBastard
 
+![Node.js CI](https://github.com/marborkowski//lazy-bastard/actions/workflows/node.js.yml/badge.svg?branch=main) ![CodeQL](https://github.com/marborkowski/lazy-bastard/actions/workflows/codeql.yml/badge.svg?branch=main)
+
 **LazyBastard** is a React component that allows a child component to
 be dynamically loaded only when that component is in the user's field of view (e.g. by
 scrolling down the page). This library uses the browser's native **<a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank">Intersection Observer API</a>**. See the rest of this documentation for <a href="#compatibility">compatibility</a> for different versions of the most popular browsers.
