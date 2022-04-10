@@ -1,6 +1,6 @@
 # Welcome to LazyBastard
 
-![Node.js CI](https://github.com/marborkowski//lazy-bastard/actions/workflows/node.js.yml/badge.svg?branch=main) ![CodeQL](https://github.com/marborkowski/lazy-bastard/actions/workflows/codeql.yml/badge.svg?branch=main)
+![Node.js CI](https://github.com/marborkowski//lazy-bastard/actions/workflows/node.js.yml/badge.svg?branch=main)(https://github.com/marborkowski/lazy-bastard/actions/workflows/node.js.yml) ![CodeQL](https://github.com/marborkowski/lazy-bastard/actions/workflows/codeql.yml/badge.svg?branch=main)(https://github.com/marborkowski/lazy-bastard/actions/workflows/codeql.yml)
 
 **LazyBastard** is a React component that allows a child component to
 be dynamically loaded only when that component is in the user's field of view (e.g. by
